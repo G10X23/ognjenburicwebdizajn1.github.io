@@ -1,0 +1,588 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Schibsted Grotesk", sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    cursor: pointer;
+}
+.container-box{
+    height: 300px;
+    margin: 30px auto;
+    display: flex;
+    justify-content:center;
+
+}
+#main{
+    height: 700px;
+    background-image: url("../images/retro1.jpg");
+    background-size: cover;
+    color: #292a2d;
+    font-weight: bold;
+    font-size: xx-large;
+    position: relative;
+}
+
+
+/* MENI */
+#meni{
+    background-color:#292a2d;
+    color: white;   
+    padding: 20px 500px;
+    height: 30px;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+#meni ul{
+    list-style: none;
+    float: left;
+
+}
+#meni ul li{
+    color: white;
+    text-align: center;
+    float: left;
+    margin-right: 50px;
+    position: relative;
+
+}
+#meni ul li::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    left: 0px;
+    right: 0px;
+    bottom: -5px;
+    width: 0;
+    background:white;
+    transition: width .2s;
+}
+#meni ul li:hover{
+    cursor: pointer;
+}
+#meni ul li:hover::after{
+    width: 100%;
+}
+#autor{
+    width: 100px;
+    float: left;
+    background-color: #f2f2f2;
+    border: 3px solid transparent;
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+    
+}
+#autor a{
+    color:#292a2d;
+}
+#autor a::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    left: 12.5px;
+    right: 0px;
+    bottom: -1.5px;
+    width: 0;
+    background:#292a2d;
+    transition: width .2s;
+}
+#autor a:hover::after{
+    width: 75%;
+}
+
+/* PRODAVNICA */
+#shop{
+    position: relative;
+    top: 0px;
+    background-color:#d8bdaa;
+    border-bottom: 5px solid #292a2d;
+    height: 600px;  
+    width: auto; 
+    padding: 20px;
+}
+#shop h2{
+    font-weight: bold;
+    text-align: center;
+    font-family: "Plaster", system-ui;
+    font-size: xx-large;
+}
+
+#selekcija{
+    display: flex;
+    justify-content: center;
+}
+.ploca{
+    margin: 30px 50px;
+    border: solid 3px #292a2d;
+}
+a .ploca{
+    color:#292a2d;
+}
+.ploca img{
+    height: 300px;
+    width: 300px;
+    margin-bottom: 40px; 
+}
+.ploca h4, .ploca p{
+    margin: 5px 10px;
+    position: relative;
+}
+.ploca h4 a{
+    color: #292a2d;
+    position: relative;
+}
+.ploca h4 a::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 0;
+    background:#292a2d;
+    transition: width .2s;
+}
+.ploca h4 a:hover::after{
+    width: 100%;
+}
+.button{
+    background-color:#292a2d;
+    border: solid 3px #292a2d;
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    width: 200px;
+    padding: 10px;
+    
+}
+.button:hover{
+    background-color: #bbbbbc;
+    color: #292a2d;
+}
+.button h3{
+    position: relative;
+}
+.button h3 a::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    left: 20px;
+    right: 0px;
+    bottom: -5px;    
+    width: 0;
+    background:#292a2d;
+    transition: width .2s;
+}
+.button h3 a:hover::after{
+    width: 80%;
+}
+#shop .button{
+    margin: 0 auto;
+}
+
+/* NEWS */
+#news{
+    height: 600px;
+    width: auto;
+    position: relative;
+    border-bottom: 5px solid #292a2d;
+    background-color: #bbbbbc;
+    padding: 40px 30px;
+}
+#highlight{
+    display: flex;
+    height: 500px;
+    width: 100%;
+    justify-content: center;
+}
+#news h2{
+    font-weight: bold;
+    text-align: center;
+    margin-right: 50px;
+    font-family: "Plaster", system-ui;
+    font-size: xx-large;
+}
+#news .button{
+    margin: 0 auto;
+}
+/* NEWS BLOCK */
+#newsblock1, #newsblock2, #newsblock3{
+    height: 400px;
+    width: 400px;
+    border:solid 3px #292a2d;
+    margin-top: 60px;
+    margin-right: 70px;
+    position: relative;
+}
+#newsblock1{
+    background-image: url("../images/vinyl_night.jpg");
+    
+}
+#newsblock2{
+    background-image: url("../images/kick_of_the_beat.jpg");
+    
+}
+#newsblock3{
+    background-image: url("../images/sesti_sajam.jpg");
+    
+}
+.ntext-block{
+    position: absolute;
+    top: 300px;
+    background-color:#292a2d;
+    opacity: 0.8;
+    height: 100px;
+    width: 400px;
+    text-align: left;
+}
+.ntext-block p{
+    opacity: 1;
+    color: white;
+    margin: 10px;
+}
+.ntext-block p a{
+    text-decoration: underline;
+}
+
+
+
+
+/* About us main  */
+#aboutus-main2{
+    height: 500px;
+    width: auto;
+    background-color: #c24238;
+    border-bottom: solid 5px #292a2d;
+    padding: 30px 0px;
+
+}
+#aboutus-main2 .button{
+    margin: 50px auto;
+
+}
+
+.aboutus-image1{
+    background-image: url("../images/about_us_image1.jpg");
+    height: 300px;
+    width: 532px;
+    margin-left: 200px;
+}
+
+/* FOOTER */
+#footer{
+    background-color: #292a2d;
+    height: 400px;
+    width: auto;
+    position: relative;
+}
+#brend{
+    font-family:"Plaster", system-ui ;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    font-size: x-large;
+}
+#logo{
+    background-image: url("../images/brand_icon.jpg");
+    width: 150px;
+    height: 150px;
+    border: 3px solid #292a2d;
+    border-radius: 50%;
+    position: absolute;
+    left: 50px;
+    top: 140px;
+}
+
+/* Linkovi menija */
+#links{
+    position: absolute;
+    padding: 20px;
+    border-right: 3px solid #f2f2f2;
+    left: 350px;
+    top: 100px;
+}
+#links ul{
+    list-style: none; 
+}
+#links ul li {
+    margin: 20px;
+}
+#links ul li a{
+    font-size: large;
+    text-decoration: underline;
+}
+
+/* Kontakt info */
+#contact{
+    position: absolute;
+    padding: 20px;
+    border-right: 3px solid #f2f2f2;
+    left: 550px;
+    top: 100px;
+    height: auto;
+}
+
+#contact ul li {
+    margin: 30px;
+    color: white;
+}
+
+/* Kontakt box */
+
+#contact-form{
+    position: absolute;
+    padding: 20px;
+    width: 700px;
+    left: 1050px;
+    top: 20px;
+    color: white;
+}
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 35px; 
+    margin-top: 6px; 
+    margin-bottom: 16px;
+    resize: vertical;          
+}
+#subject{
+    border-radius: 25px;
+}
+input[type=submit] {
+    background-color:#f2f2f2;
+    color:#292a2d;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    cursor: pointer;
+}
+
+/* Socials */
+#socials{
+    position: absolute;
+    top: 290px;
+    left: 590px;
+}
+#socials a{
+    margin-right: 20px;
+}
+#socials a:hover{
+    cursor: pointer;
+}
+#socials a i{
+    font-size: large;
+}
+#header-about{
+    height: 300px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    background-color:#c24238;
+}
+#main-text{
+    height: 200px;
+    width: 550px;
+    margin-top: 50px;
+    
+}
+#main-text h1{
+    font-size: xx-large;
+    font-weight: 900;
+    font-family:"Plaster", system-ui;
+}
+#main-text p{
+    margin-top: 10px;
+    font-size: larger;
+}
+#header-about img{
+    margin-right: 50px;
+    margin-top: 30px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+/* ABOUT US MAIN */
+
+
+#aboutus-main{
+    height: 400px;
+    width: auto;
+    background-color: #d8bdaa;
+    border-bottom: solid 5px #292a2d;
+    padding: 30px 0px;
+    
+}
+
+
+#aboutus-events{
+    height: 400px;
+    width: auto;
+    background-color: #bbbbbc;
+    border-bottom: solid 5px #292a2d;
+    padding: 30px 0px;
+    
+}
+#aboutus-saradnje{
+    height: 400px;
+    width: auto;
+    background-color:#c24238;
+    border-bottom: solid 5px #292a2d;
+    padding: 30px 0px;
+    
+}
+#aboutus-saradnje h2, #aboutus-events h2, #aboutus-main h2, #aboutus-main2 h2{
+    font-family:"Plaster", system-ui;
+    font-size: xx-large;
+    text-align: center;
+    
+}
+.aboutus-text1{
+    width: 400px;
+    height: 300px;
+    padding: 80px 0px;
+    font-size: large;
+    font-weight: bold;
+}
+#aboutus-image2{
+    background-image: url(../images/about_us_image2.jpg);
+    height: 300px;
+    width: 532px;
+    margin-left: 200px;
+}
+#aboutus-image3{
+    background-image: url(../images/about_us_image3.jpg);
+    height: 300px;
+    width: 532px;
+    margin-left: 200px;
+}
+
+/* ABOUT AUTHOR */
+#o-autoru{
+    height: 400px;
+    width: auto;
+    background-color: #d8bdaa;
+    padding: 30px;
+}
+#o-autoru img{
+    height: 300px;
+    width: 200px;
+}
+#aboutus-main3{
+    height: 500px;
+    width: auto;
+    background-color:#d8bdaa;
+    border-bottom: solid 5px #292a2d;
+    padding: 30px 0px;
+
+}
+
+#aboutus-main3 h2{
+    font-weight: bold;
+    text-align: center;
+    font-family: "Plaster", system-ui;
+    font-size: xx-large;
+    text-align: center;
+}
+#aboutus-main3 .button{
+    margin: 0 auto;
+}
+#aboutus-main3 .container-box img{
+    margin:0 100px;
+}
+/* GALLERY */
+#gallery{
+    height: 800px;
+    width: auto;
+    background-color:#d8bdaa;
+    padding: 20px;
+    
+}
+
+
+#gallery .container-box img{
+    margin: 20px;
+    height: 300px;
+    width: 500px;
+}
+#gallery h2{
+    font-weight: bold;
+    text-align: center;
+    font-family: "Plaster", system-ui;
+    font-size: xx-large;
+}
+
+
+/* Store */
+#storefront{
+    height: 1000px;
+    width: auto;
+    background-color: #d8bdaa;
+    padding: 20px;
+}
+#storefront h2{
+    font-weight: bold;
+    text-align: center;
+    font-family: "Plaster", system-ui;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.izbor{
+    display: flex;
+    justify-content: center;
+}
+
+#izlog{
+    height: 700px;
+    width: auto;
+    background-color: #d8bdaa;
+    border-bottom: 5px solid #292a2d;
+    padding: 20px;
+}
+#container-box-ponuda{
+    height: 600px;
+    margin: 30px auto;
+    display: flex;
+    justify-content:center;
+}
+.cijena{
+    height: 600px;
+    width: 600px;
+    margin-left: 50px;
+    
+    padding: 20px;
+}
+.cijena p{
+    font-size: larger;
+    font-weight: bold;
+
+}
+#cijena1{
+    margin-top: 65%;
+}
+#cijena1 h2{
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+#cijena1 p{
+    margin-bottom: 10px;
+}
