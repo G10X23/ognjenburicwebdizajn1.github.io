@@ -112,7 +112,7 @@ a:hover{
     width: auto; 
     padding: 20px;
 }
-#shop h2{
+#shop h1{
     font-weight: bold;
     text-align: center;
     font-family: "Plaster", system-ui;
@@ -135,15 +135,18 @@ a .ploca{
     width: 300px;
     margin-bottom: 40px; 
 }
-.ploca h4, .ploca p{
+
+.ploca h2, .ploca p{
     margin: 5px 10px;
     position: relative;
 }
-.ploca h4 a{
+.ploca h2 a{
+    font-size:medium;
     color: #292a2d;
+    font-family: "Schibsted Grotesk", sans-serif;
     position: relative;
 }
-.ploca h4 a::after{
+.ploca h2 a::after{
     content: "";
     position: absolute;
     height: 3px;
@@ -154,7 +157,7 @@ a .ploca{
     background:#292a2d;
     transition: width .2s;
 }
-.ploca h4 a:hover::after{
+.ploca h2 a:hover::after{
     width: 100%;
 }
 .button{
@@ -418,7 +421,23 @@ input[type=submit]:hover {
     height: 200px;
     width: 200px;
     border-radius: 50%;
+    transition-duration:1s;
+    animation:animate 3s;
 }
+@keyframes animate{
+    from{
+    transform:rotate(0deg);
+    } 
+    to{
+    transform:rotate(-720deg);
+    }
+    from{
+    right:5px;
+    } 
+    to{
+    right:80%;
+    }
+  }
 
 /* ABOUT US MAIN */
 
@@ -538,12 +557,21 @@ input[type=submit]:hover {
     background-color: #d8bdaa;
     padding: 20px;
 }
-#storefront h2{
+#storefront h1{
     font-weight: bold;
     text-align: center;
     font-family: "Plaster", system-ui;
     font-size: xx-large;
-    text-align: center;
+}
+
+#storefront h2{
+    font-weight: bold;
+    font-family: "Plaster", system-ui;
+    font-size: xx-large;
+}
+    
+.ploca h2{
+    text-align: left;
 }
 
 .izbor{
@@ -574,10 +602,11 @@ input[type=submit]:hover {
 .cijena p{
     font-size: larger;
     font-weight: bold;
+    margin-bottom: 20px;
 
 }
 #cijena1{
-    margin-top: 65%;
+    margin-top: 10%;
 }
 #cijena1 h2{
     text-decoration: underline;
